@@ -1,92 +1,36 @@
-
-// Chiedi all'utente se vuole pari o dispari
-
-let playerEven = false;
-const evenOrOdd = prompt('pari o dispari?').trim();
-console.log(evenOrOdd);
+console.log('JS OK')
 
 
-if (evenOrOdd === 'pari') {
 
-    playerEven = true;
+// Chiedi all'utente di inserire una parola
+
+const word = prompt('Inserisci una parola e ti dirò se essa è palidroma').trim();
+console.log (word);
+
+
+
+
+// Creo una funziona per stabilire se la parola è palidroma
+
+function isPalindrome() {
+
+    const reverse = word.split('');
+    return reverse;
 }
 
+let reversed = '';
+const reverse = isPalindrome();
+console.log(reverse);
 
 
+// Inverti l'ordine degli elementi
 
-// Chiedi all'utente un numero da 1 a 5
+for (let i = reverse; i < 1; i--) {
 
-const playerNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
-console.log(playerNumber);
-
-
-
-
-
-// # VALIDAZIONE
-
-isValid = true;
-
-if (playerNumber > 5 || playerNumber < 1) {
-    alert('I numeri inseriti non sono validi');
-    isValid = false;
+    console.log(i);
+    reversed += reverse[i];
 }
 
-if (isValid = true) { 
-
-    
-    // LOGICA PRINCIPAE ---------------------------------------------------------
-    
-    
-    
-    // Crea una funzione che generi un numero casuale
-    
-    function numGenerator() {
-        
-        const cpuNum = Math.floor(Math.random() * 5 + 1);
-        return cpuNum;
-    }
-    
-    
-    const cpuNum = numGenerator();
-    alert('Il numero della CPU è : ' + cpuNum);
+console.log(reversed); 
 
 
-
-
-    //Somma i numeri
-    const tot = cpuNum + playerNumber;
-    alert('Il totale è : ' + tot);
-
-
-
-
-    // Crea una funzione che verifichi se il totale è pari
-
-    function isEven() {
-        
-        let isEven = false;
-        
-        if (tot % 2 === 0) {
-            
-            isEven = true;
-        }
-        
-        return isEven;
-    }
-
-
-
-    // Comunica la risposta
-
-    const even = isEven();
-
-    if (even === playerEven) {
-        alert('Congratulazioni, hai vinto!');
-    }
-    else {
-        alert('Mi dispiace, ha vinto la CPU');
-    }
-
-
-}
