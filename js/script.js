@@ -4,7 +4,7 @@ console.log('JS OK')
 
 // Chiedi all'utente di inserire una parola
 
-const word = prompt('Inserisci una parola e ti dirò se essa è palidroma').trim();
+const word = prompt('Inserisci una parola e ti dirò se essa è palindroma').trim();
 console.log (word);
 
 
@@ -25,12 +25,21 @@ console.log(reverse);
 
 // Inverti l'ordine degli elementi
 
-for (let i = reverse; i < 1; i--) {
+for (let i = reverse.length -1; i > -1; i--) {
 
-    console.log(i);
     reversed += reverse[i];
 }
 
 console.log(reversed); 
 
 
+// COntrolla che le due parole siano uguali
+
+alert('La tua parola al contrario è : ' + reversed);
+
+if (word === reversed) {
+    alert('La tua parola è Palindroma')
+}
+else {
+    alert('La tua parola non è palindroma')
+}
